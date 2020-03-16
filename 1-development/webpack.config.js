@@ -4,7 +4,7 @@ const {
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
-    entry: './demo/js/index.js', //入口文件
+    entry: './src/js/index.js', //入口文件
     output: {
         filename: 'build.js', //输出文件
         path: resolve(__dirname, 'build') //输出文件的地址
@@ -43,7 +43,7 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: "./demo/index.html" //html入口文件
+            template: "./src/index.html" //html入口文件
         })
     ],
     mode: 'development'

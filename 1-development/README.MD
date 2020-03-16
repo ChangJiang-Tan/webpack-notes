@@ -123,4 +123,4 @@ cnpm i -D webpack webpack-cli style-loader css-loader less-loader less url-loade
 ## 结束
 
 [前往下一节](../2-production/README.MD)
-[返回首页](README.MD)
+[返回首页](../README.MD)

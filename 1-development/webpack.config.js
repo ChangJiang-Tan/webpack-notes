@@ -46,5 +46,11 @@ module.exports = {
             template: "./src/index.html" //html入口文件
         })
     ],
-    mode: 'development'
+    mode: 'development',
+    devServer:{
+        contentBase:resolve(__dirname,'build'),
+        compress:true,
+        open:true,
+        port:3000
+    }
 }

@@ -1,6 +1,31 @@
 # webpack开发环境的搭建
 
+## webpack安装与引入
+
+生成包文件`package.json`
+> `npm init`
+
+安装`webpack`与`webpack-cli`(全局安装和开发环境安装)
+
+> `cnpm i -g webpack webpack-cli`
+> `cnpm i -D webpack webpack-cli`
+
 ## webpack配置
+
+创建`webpack.config.js`文件，文件结构如下：
+
+```js
+module.exports={
+    entry:'',
+    output:{}
+    module:{
+        rules:[]
+        }
+    plugins:[],
+    mode:'',
+    ...
+}
+```
 
 webpack配置有5块，分别是`entry`、`output`、`loader`、`plugin`、`mode`
 
@@ -17,7 +42,8 @@ webpack配置有5块，分别是`entry`、`output`、`loader`、`plugin`、`mode
 
 - loader 非js文件的识别，类似翻译
   - 1、下载；2、使用
-  - 使用方法：（需要利用`npm i -D xxx`来安装需要使用的插件）
+  - 使用方法：（需要利用`cnpm i -D xxx`来安装需要使用的插件）
+    > `cnpm i -D style-loader css-loader less-loader url-loader html-loader file-loader`
 
     ```js
     module:{
@@ -70,6 +96,7 @@ webpack配置有5块，分别是`entry`、`output`、`loader`、`plugin`、`mode
 - plugin 插件，用于复杂内容的压缩、优化等
   - 1、下载；2、引用；3、使用
   - html文件的打包需要写在该配置下面
+    > `cnpm i -D html-webpack-plugin`
 
     ```js
     const HtmlWebpackPlugin=require('html-webpack-plugin')
@@ -88,6 +115,7 @@ webpack配置有5块，分别是`entry`、`output`、`loader`、`plugin`、`mode
 ## `devServer`开发服务器
 
 用于自动化编译，需要安装`webpack-dev-server`
+> `cnpm i -D webpack-dev-server`
 
 ```js
 devServer:{

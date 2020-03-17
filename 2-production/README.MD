@@ -120,6 +120,8 @@ webpack默认打包会将所有css文件打包到一个js之中，这样会导�
   },
   ```
 
+  > `//eslint-disable-next-line` 可以忽略下一行的eslint检查（主要针对console）
+
 - js兼容性处理
   需要安装`babel-loader`、`@babel/preset-env`与babel的核心`@babel/core`
   > `cnpm i -D babel-loader @babel/preset-env @babel/core`
@@ -200,4 +202,5 @@ cnpm i -D mini-css-extract-plugin postcss-loader postcss-preset-env optimize-css
 ## 结束
 
 [返回上一节](../1-development/README.MD)
+[前往下一节](../3-optimize/README.MD)
 [返回首页](../README.MD)
